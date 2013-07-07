@@ -1,0 +1,211 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700|Bad+Script");
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, html { font-size: 15px; padding: 0; margin: 0;}
+
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('fonts/icomoon.eot');
+    src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.woff') format('woff'),
+        url('fonts/icomoon.ttf') format('truetype'),
+        url('fonts/icomoon.svg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+    font-family: 'icomoon';
+    content: attr(data-icon);
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-paperclip, .icon-quill {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+.icon-paperclip:before {
+    content: "\e000";
+}
+.icon-quill:before {
+    content: "\e001";
+}
+
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #89867e;
+    background: #ACAFA5;
+    cursor: default;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #888;
+}
+
+.main,
+.container > header {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.main {
+    max-width: 82.667em;
+    min-height: 40em;
+}
+
+.container > header {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 3em 2em 2em 2em;
+    background: rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+}
+
+.container > header h1 {
+    font-size: 2.625em;
+    line-height: 1em;
+    margin: 0;
+    font-weight: 300;
+}
+
+.container > header h1 > b {
+    font-weight: 300;
+    display: inline-block;
+    border-radius: 40px 0;
+    color: rgba(0, 0, 0, 0.3);
+}
+.container > header h1 > b strong {
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.container > header span {
+    display: block;
+    font-size: 60%;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0 0 0.6em 0.1em;
+    font-family: 'Bad Script', sans-serif;
+    text-transform: none;
+}
+
+.menu-top {
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    text-align: right;
+    right: 0;
+}
+.menu-top a {
+    position: relative;
+    transition: all .2s ease-out;
+    display: inline-block;
+    padding: 8px 10px;
+    text-transform: uppercase;
+    font-size: 0.68em;
+    color: white;
+    letter-spacing: 0.1em;
+}
+.menu-top a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+h3 {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+input[type="button"]{
+    height: 38px;
+    position: relative;
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 38px;
+    text-align: center;
+    font-weight: bold;
+    padding: 0 20px;
+
+    background: #FBD568;
+    background: -moz-linear-gradient(#FBD568, #FFB347);
+    background: -ms-linear-gradient(#FBD568, #FFB347);
+    background: -o-linear-gradient(#FBD568, #FFB347);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#FBD568), to(#FFB347));
+    background: -webkit-linear-gradient(#FBD568, #FFB347);
+    background: linear-gradient(#FBD568, #FFB347);
+    border: 1px solid #F4AB4C;
+    color: #996319;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.3);
+    margin-right: 10px;
+}
+input[type="text"],
+textarea.textarea {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+    width: 50%;
+    padding: 10px 18px 10px 10px;
+    border: none;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1), inset 0 3px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    background: #F9F9F9;
+    color: #777;
+    -webkit-transition: color 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out;
+    -ms-transition: color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out;
+    transition: color 0.3s ease-out;
+}
+#content {
+    padding: 2em;
+}
+
+.syntaxhighlighter {
+    clear: both;
+    padding: 10px;
+    width: auto!important;
+    font-size: 13px !important;
+    line-height: 21px !important;
+    font-family: Courier, "Courier New", monospace;
+    margin: 1em 0 1em 0 !important;
+    position: relative !important;
+    overflow: auto !important;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #FFF !important;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+}
