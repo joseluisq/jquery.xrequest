@@ -1,4 +1,3 @@
-
 /*
  jQuery xRequest Plugin v1.0
  
@@ -79,7 +78,9 @@ function xRequest(element, list) {
             success: function(data, textStatus, jqXHR) {
                 if (typeof(data) == 'object') {
                     if (data['header'] && data.header['token']) {
-                        this.csrf.attr('content', data.header.token);
+                        if (s.csrf) {
+                            s.csrf.attr('content', data.header.token);
+                        }
                     }
                 }
 
