@@ -34,7 +34,7 @@ function xRequest(element, list) {
         this.csrf = this.csrf.length > 0 ? this.csrf : null;
 
         if (this.element instanceof $) {
-            this.isform = element.prop('tagName').toString().toLowerCase() === 'form';
+            this.isForm();
         } else {
             options = element;
         }
@@ -141,21 +141,32 @@ function xRequest(element, list) {
     this.clearData = function() {
         this.options.data = null;
     };
+    
+    this.setForm = function(element) {
+        this.element = element;
+        this.isForm();
+    };
+    
+    this.isForm = function(){
+        return this.isform = this.element ? (this.element.prop('tagName').toString().toLowerCase() === 'form') : false;
+    }
 
     this.encodeObjects = function() {
         var data = {}, name;
-
-        $('input,select,textarea,.xcombobox', this.element).each(function() {
-            if ($(this).hasClass('xcombobox')) {
-                name = $.trim($(this).attr('id'));
-                data[name] = $.trim($(this).xcombobox('getValue'));
-            }
-            else {
-                name = $.trim($(this).attr('name'));
-                data[name] = $.trim($(this).val());
-            }
-        });
-
+        
+        if (this.isform && this.options.processForm) {
+             $('input,select,textarea,.xcombobox', this.element).each(function() {
+                if ($(this).hasClass('xcombobox')) {
+                    name = $.trim($(this).attr('id'));
+                    data[name] = $.trim($(this).xcombobox('getValue'));
+                }
+                else {
+                    name = $.trim($(this).attr('name'));
+                    data[name] = $.trim($(this).val());
+                }
+            });
+        }
+        
         return data;
     };
 
