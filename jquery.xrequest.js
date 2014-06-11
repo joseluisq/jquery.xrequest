@@ -1,5 +1,5 @@
 /*
- jQuery xRequest Plugin v1.0.1
+ jQuery xRequest Plugin v1.0.2
  
  Release: 07/07/2014
  Author: Jose Luis Quintana <joseluisquintana20@gmail.com>
@@ -50,7 +50,7 @@
 
             if (opt.data && typeof (data) === 'object') {
                 for (key in opt.data) {
-                    data[key] = opt.data[key];
+                    opt.data[key] = data[key];
                 }
             }
 
@@ -75,6 +75,7 @@
                 type: opt.type,
                 url: opt.url,
                 data: data,
+                cache: false,
                 dataType: opt.dataType,
                 success: function(data, textStatus, jqXHR) {
                     if (typeof (data) == 'object') {
