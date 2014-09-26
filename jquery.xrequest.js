@@ -1,6 +1,6 @@
 /*
- * jQuery xRequest Plugin v1.0.3
- * Release: 07/07/2014
+ * jQuery xRequest Plugin v1.0.2
+ * Release: 26/09/2014
  * Author: Jose Luis Quintana <joseluisquintana20@gmail.com>
  * https://github.com/joseluisq/jquery.xrequest
  * Released under MIT Licence: http://www.opensource.org/licenses/mit-license.php
