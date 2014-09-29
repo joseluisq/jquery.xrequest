@@ -1,15 +1,14 @@
 /*
- * jQuery xRequest Plugin v1.0.3
- * @author	: Jose Luis Quintana <joseluisquintana20@gmail.com>
- * @link	: https://github.com/joseluisq/jquery.xrequest
- * @licence	: http://www.opensource.org/licenses/mit-license.php
+ * jQuery xRequest Plugin v1.0.4
+ * Release: 29/09/2014
+ * Author: Jose Luis Quintana <joseluisquintana20@gmail.com>
+ * https://github.com/joseluisq/jquery.xrequest
+ * Released under MIT Licence: http://www.opensource.org/licenses/mit-license.php
  */
-
 (function () {
     window.xRequest = function (element, list) {
         this.isform = false;
         this.sending = false;
-
         this.options = {
             url: './',
             type: 'post',
@@ -45,16 +44,12 @@
 
             if (opt.data && typeof (data) === 'object') {
                 for (key in opt.data) {
-                    opt.data[key] = data[key];
+                    data[key] = opt.data[key];
                 }
             }
 
-            data['r'] = new Date().getTime();
-            opt.data = data;
-
             if (opt.csrf) {
                 var s = this;
-
                 if ('ajaxPrefilter' in $) {
                     $.ajaxPrefilter(function (o, o, xhr) {
                         s.setCSRFHeader(xhr);
@@ -66,6 +61,8 @@
                 }
             }
 
+            data['r'] = new Date().getTime();
+
             return $.ajax({
                 type: opt.type,
                 url: opt.url,
@@ -73,7 +70,7 @@
                 cache: false,
                 dataType: opt.dataType,
                 success: function (data, textStatus, jqXHR) {
-                    if (typeof (data) == 'object') {
+                    if (typeof (data) === 'object') {
                         if (data['header'] && data.header['token']) {
                             if (s.csrf) {
                                 s.csrf.attr('content', data.header.token);
@@ -81,7 +78,6 @@
                         }
                     }
 
-                    delete s.options.data['r'];
                     s.sending = false;
                     opt.onSuccess.apply(s, [data, textStatus, jqXHR]);
                 },
@@ -174,7 +170,6 @@
         this.setCSRFHeader = function (xhr) {
             if (this.csrf) {
                 var token = this.csrf.attr('content');
-
                 if (token) {
                     xhr.setRequestHeader('X-CSRF-Token', token);
                 }
