@@ -1,6 +1,6 @@
 The MIT License
 
-Copyright (c) 2012 Jose Luis Quintana <joseluisquintana20@gmail.com>
+Copyright (c) 2012 Jose Luis Quintana
 http://www.joseluisquintana.pe/
 
 Permission is hereby granted, free of charge, to any person obtaining

@@ -1,152 +1,154 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>jQuery xRequest</title>
-        <meta name="description" content="jQuery xRequest - Simple plugin to Ajax Request">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link type="text/css" href="default.css" rel="stylesheet">
 
-        <!-- Csrf-Token (Optional) -->
-        <meta name="csrf-token" content="263e6b75df292d30fb76037a68301fe3"/>
+<head>
+  <title>jQuery xRequest</title>
+  <meta name="description" content="jQuery xRequest - Simple plugin to Ajax Request">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link type="text/css" href="default.css" rel="stylesheet">
 
-        <!-- Syntax Highlighter -->
-        <link href="shCore.css" rel="stylesheet" type="text/css" />
-        <link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
+  <!-- Csrf-Token (Optional) -->
+  <meta name="csrf-token" content="263e6b75df292d30fb76037a68301fe3" />
 
-    </head>
-    <body>
-        <a href="https://github.com/joseluisq/jquery.xrequest">
-            <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
-        </a>
+  <!-- Syntax Highlighter -->
+  <link href="shCore.css" rel="stylesheet" type="text/css" />
+  <link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
 
-        <div class="container">
+</head>
 
-            <header>
-                <h1>
-                    <b>jQuery <strong>xRequest</strong></b>
-                    <span>Simple plugin to Ajax Request</span>
-                </h1>
+<body>
+  <a href="https://github.com/joseluisq/jquery.xrequest">
+    <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
+  </a>
 
-                <div>
-                    <input name="button" type="button" value="Download" style="margin-top: 10px;" onclick="javascript:document.location = 'https://github.com/joseluisq/jquery.xrequest/archive/master.zip';" title="Download">
-                </div>
+  <div class="container">
 
-            </header>
+    <header>
+      <h1>
+        <b>jQuery <strong>xRequest</strong></b>
+        <span>Simple plugin to Ajax Request</span>
+      </h1>
+
+      <div>
+        <input name="button" type="button" value="Download" style="margin-top: 10px;" onclick="javascript:document.location = 'https://github.com/joseluisq/jquery.xrequest/archive/master.zip';" title="Download">
+      </div>
+
+    </header>
 
 
-            <div id="content">
-                <h3>Javascript</h3>
+    <div id="content">
+      <h3>Javascript</h3>
 
-                <div class="code">
-                    <pre class="brush: js; toolbar: false; gutter: false;">
-                        $(function() {
-                            // Initialize
-                            var myrequest = new xRequest({
-                                url: 'server.php',
-                                onStart: function() {
-                                    $('#console').text('Sending..');
-                                },
-                                onSuccess: function(json) {
-                                    if (json) {
-                                        $('#console').html(json.time + '\n' + json.hash);
-                                    }
-                                }
-                            });
+      <div class="code">
+        <pre class="brush: js; toolbar: false; gutter: false;">
+            $(function() {
+              // Initialize
+              var myrequest = new xRequest({
+                url: 'server.php',
+                onStart: function() {
+                    $('#console').text('Sending..');
+                },
+                onSuccess: function(json) {
+                  if (json) {
+                      $('#console').html(json.time + '\n' + json.hash);
+                  }
+                }
+              });
 
-                            $('#mybutton').on('click', function() {
+              $('#mybutton').on('click', function() {
 
-                                // Checks if plugin is sending.
-                                if (!myrequest.isSending()) {
-                                    // Set one param on the fly
-                                    myrequest.setData('myparam', 0);
+                // Checks if plugin is sending.
+                if (!myrequest.isSending()) {
+                  // Set one param on the fly
+                  myrequest.setData('myparam', 0);
 
-                                    // Send request
-                                    myrequest.send();
-                                }
+                  // Send request
+                  myrequest.send();
+                }
 
-                            });
-                        });
-                    </pre>
-                </div>
+              });
+            }(jQuery));
+        </pre>
+      </div>
 
-                <h3>PHP</h3>
-                <div class="code">
-                    <pre class="brush: php; toolbar: false; gutter: false;">
-                        &lt;?php
-                            
-                            // JSON output
-                            echo json_encode(array(
-                                'time' => '&lt;b>Server time:&lt;/b> ' . time(),
-                                'hash' => '&lt;b>Server hash (md5):&lt;/b> ' . hash('md5', time())
-                            ));
-                    </pre>
-                </div>
+      <h3>PHP</h3>
+      <div class="code">
+        <pre class="brush: php; toolbar: false; gutter: false;">
+          &lt;?php
+          
+          // JSON output
+          echo json_encode(array(
+            'time' => '&lt;b>Server time:&lt;/b> ' . time(),
+            'hash' => '&lt;b>Server hash (md5):&lt;/b> ' . hash('md5', time())
+          ));
+        </pre>
+      </div>
 
-                <h3>Live</h3>
+      <h3>Live</h3>
 
-                <div>
-                    <input id="mybutton" name="button" type="button" value="Get Data" style="margin-bottom: 10px;"><br>
-                    <div class="syntaxhighlighter" style="min-height: 100px;">
-                        <pre style="padding: 0 20px;"><code id="console">Please press the button !</code></pre>
-                    </div>
-                </div>
-
-            </div>
-
+      <div>
+        <input id="mybutton" name="button" type="button" value="Get Data" style="margin-bottom: 10px;">
+        <br>
+        <div class="syntaxhighlighter" style="min-height: 100px;">
+          <pre style="padding: 0 20px;"><code id="console">Please press the button !</code></pre>
         </div>
+      </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script src="../jquery.xrequest.js"></script>
+    </div>
 
-        <!-- Syntax Highlighter -->
-        <script type="text/javascript" src="shCore.js"></script>
-        <script type="text/javascript" src="shBrushPhp.js"></script>
-        <script type="text/javascript" src="shBrushJScript.js"></script>
+  </div>
 
-        <script type="text/javascript">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="../jquery.xrequest.js"></script>
 
-                        $(function() {
-                            SyntaxHighlighter.all();
+  <!-- Syntax Highlighter -->
+  <script type="text/javascript" src="shCore.js"></script>
+  <script type="text/javascript" src="shBrushPhp.js"></script>
+  <script type="text/javascript" src="shBrushJScript.js"></script>
 
-                            // Initialize
-                            var myrequest = new xRequest({
-                                url: 'server.php',
-                                onStart: function() {
-                                    $('#console').text('Sending..');
-                                },
-                                onSuccess: function(json) {
-                                    if (json) {
-                                        $('#console').html(json.time + '\n' + json.hash);
-                                    }
-                                }
-                            });
+  <script type="text/javascript">
+  $(function() {
+    SyntaxHighlighter.all();
 
-                            // Set one param.
-                            myrequest.setData('mysparam', 100);
+    // Initialize
+    var myrequest = new xRequest({
+      url: 'server.php',
+      onStart: function() {
+        $('#console').text('Sending..');
+      },
+      onSuccess: function(json) {
+        if (json) {
+          $('#console').html(json.time + '\n' + json.hash);
+        }
+      }
+    });
 
-                            // Set some params.
-                            myrequest.setData({
-                                "myparam2": 2,
-                                "myparam3": 220
-                            });
+    // Set one param.
+    myrequest.setData('mysparam', 100);
 
-                            $('#mybutton').on('click', function() {
+    // Set some params.
+    myrequest.setData({
+      "myparam2": 2,
+      "myparam3": 220
+    });
 
-                                // Checks if plugin is sending.
-                                if (!myrequest.isSending()) {
-                                    // Set one param on the fly
-                                    myrequest.setData('myparam', 0);
+    $('#mybutton').on('click', function() {
 
-                                    // remove one param
-                                    myrequest.removeDataElement('myparam3');
+      // Checks if plugin is sending.
+      if (!myrequest.isSending()) {
+        // Set one param on the fly
+        myrequest.setData('myparam', 0);
 
-                                    // Send request
-                                    myrequest.send();
-                                }
+        // remove one param
+        myrequest.removeDataElement('myparam3');
 
-                            });
-                        });
+        // Send request
+        myrequest.send();
+      }
 
-        </script>
-    </body>
+    });
+  });
+  </script>
+</body>
+
 </html>

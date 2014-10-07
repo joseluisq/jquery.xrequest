@@ -8,12 +8,12 @@ Passing options only.
 
 ```js
 var myrequest = new xRequest({
-    url: 'server.php',
-    type: 'post',
-    dataType: 'json',
-    onSuccess: function(json) {
-        console.log(json);
-    }
+  url: 'server.php',
+  type: 'post',
+  dataType: 'json',
+  onSuccess: function(json) {
+      console.log(json);
+  }
 });
 myrequest.send();
 ```
@@ -22,14 +22,14 @@ Or passing two params, a form for serialize it's fields and options.
 
 ```js
 var myrequest = new xRequest($('#myform'), {
-    url: 'server.php',
-    type: 'post',
-    dataType: 'json',
-    processForm: true,
-    data: {foo: 'bar'},
-    onSuccess: function(json) {
-        console.log(json);
-    }
+  url: 'server.php',
+  type: 'post',
+  dataType: 'json',
+  processForm: true,
+  data: {foo: 'bar'},
+  onSuccess: function(json) {
+      console.log(json);
+  }
 });
 myrequest.send();
 ```

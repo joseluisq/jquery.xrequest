@@ -1,35 +1,31 @@
 {
-    "name": "xrequest",
-    "title": "jQuery xRequest",
-    "description": "Simple plugin to Ajax Request",
-    "keywords": [
-        "ajax",
-        "request",
-        "xhr"
-    ],
-    "version": "1.0.4",
-    "author": {
-        "name": "Jose Luis Quintana",
-        "email": "joseluisquintana20@gmail.com",
-        "url": "https://github.com/joseluisq"
-    },
-    "maintainers": [
-        {
-            "name": "Jose Luis Quintana",
-            "email": "joseluisquintana20@gmail.com",
-            "url": "https://github.com/joseluisq"
-        }
-    ],
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "https://github.com/joseluisq/jquery.xrequest/blob/master/LICENSE.txt"
-        }
-    ],
-    "bugs": "https://github.com/joseluisq/jquery.xrequest/issues",
-    "homepage": "https://github.com/joseluisq/jquery.xrequest",
-    "docs": "https://github.com/joseluisq/jquery.xrequest",
-    "dependencies": {
-        "jquery": ">=1.9.0"
-    }
+  "name": "xrequest",
+  "title": "jQuery xRequest",
+  "description": "Simple plugin to Ajax Request",
+  "keywords": [
+    "ajax",
+    "request",
+    "xhr"
+  ],
+  "version": "1.0.5",
+  "author": {
+    "name": "Jose Luis Quintana",
+    "email": "joseluisquintana20@gmail.com",
+    "url": "https://github.com/joseluisq"
+  },
+  "maintainers": [{
+    "name": "Jose Luis Quintana",
+    "email": "joseluisquintana20@gmail.com",
+    "url": "https://github.com/joseluisq"
+  }],
+  "licenses": [{
+    "type": "MIT",
+    "url": "https://github.com/joseluisq/jquery.xrequest/blob/master/LICENSE.txt"
+  }],
+  "bugs": "https://github.com/joseluisq/jquery.xrequest/issues",
+  "homepage": "https://github.com/joseluisq/jquery.xrequest",
+  "docs": "https://github.com/joseluisq/jquery.xrequest",
+  "dependencies": {
+    "jquery": ">=1.9.0"
+  }
 }
