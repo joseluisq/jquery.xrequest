@@ -34,18 +34,20 @@ var myrequest = new xRequest($('#myform'), {
 myrequest.send();
 ```
 
+
+## Installation
+**Install with Bower**
+```shell
+$ bower install xrequest --save
+```
+
 ## Demo
 
 xRequest [live demo](http://goo.gl/DgJAj)
 
 ## Documentation
 
-### Install with Bower
-```shell
-$ bower install xrequest --save
-```
-
-### Options
+#### Options
 
 * `url: './'`               - URL to send.
 * `type: 'post'`            - Send Method.
@@ -56,7 +58,7 @@ $ bower install xrequest --save
 
 **Note:** The options by xRequest are compatible with [`jQuery.ajax`](https://api.jquery.com/jQuery.ajax/) options, so for example it can use: `cache`, `jsonp`, `beforeSend` or any options supported in `jQuery.ajax` function.
 
-### Methods
+#### Methods
 
 * `isSending()`             - Checks if it's sending yet.
 * `send()`                  - Sends the ajax request.
@@ -69,7 +71,7 @@ $ bower install xrequest --save
 * `removeDataElement(key)`  - The same to `unsetDataBy` method (old)
 * `clearData()`             - Unsets all data values.
 
-### Events
+#### Events
 
 * `onStart()` - Fires when start the sending.
 * `onSuccess(data, textStatus, jqXHR)` - Fires when request is ok.
