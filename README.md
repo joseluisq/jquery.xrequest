@@ -18,7 +18,7 @@ var myrequest = new xRequest({
 myrequest.send();
 ```
 
-Passing two params, a form for serialize it's fields and options.
+Or passing two params, a form for serialize it's fields and options.
 
 ```js
 var myrequest = new xRequest($('#myform'), {
@@ -39,6 +39,11 @@ myrequest.send();
 xRequest [live demo](http://goo.gl/DgJAj)
 
 ## Documentation
+
+### Install with Bower
+```shell
+$ bower install xrequest --save
+```
 
 ### Options
 
