@@ -1,0 +1,26 @@
+{
+  "name": "xrequest",
+  "main": "jquery.xrequest.js",
+  "version": "1.0.4",
+  "homepage": "https://github.com/joseluisq/jquery.xrequest",
+  "authors": [
+    "joseluisquintana20@gmail.com"
+  ],
+  "description": "Simple plugin to Ajax Request",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "ajax",
+    "request",
+    "xhr"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
