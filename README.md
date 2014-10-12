@@ -38,7 +38,7 @@ myrequest.send();
 ## Installation
 **Install with Bower**
 ```shell
-$ bower install xrequest --save
+bower install xrequest --save
 ```
 
 ## Demo
@@ -67,9 +67,9 @@ xRequest [live demo](http://goo.gl/DgJAj)
 * `getOption(opt)`          - Gets one option. e.g: `myrequest.getOption('data')`
 * `setData(key, value)`     - Sets a param data passing key and value or a hash object. E.g: `setData({key1: val1, key2: val2})`<br>
 **Note:** `setData` adds or update the elements (key or value) in array data, it does not replace the array data itself.
-* `unsetDataBy(key)`  - Unsets one element data by key. e.g: `myrequest.removeDataElement('myparam')`
-* `removeDataElement(key)`  - The same to `unsetDataBy` method (old)
+* `unsetDataBy(key)`  - Unsets one element data by key. e.g: `myrequest.unsetDataBy('myparam')`
 * `clearData()`             - Unsets all data values.
+* ~~`removeDataElement(key)`~~  - The same to `unsetDataBy` method **(old)**
 
 #### Events
 
