@@ -147,6 +147,10 @@
       this.isForm();
     };
 
+    this.getForm = function() {
+      return this.element;
+    };
+
     this.encodeObjects = function() {
       var data = {},
         name;
