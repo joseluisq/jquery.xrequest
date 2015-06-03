@@ -1,3 +1,5 @@
+> **Deprecated:** This repository is deprecated. But if anyone wants to take over feel free to clone and go from there.
+
 # jQuery xRequest
 
 > Simple plugin to Ajax Request
