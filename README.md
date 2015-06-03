@@ -1,6 +1,6 @@
 # jQuery xRequest
 
-Simple plugin to Ajax Request
+> Simple plugin to Ajax Request
 
 ## How to use
 
